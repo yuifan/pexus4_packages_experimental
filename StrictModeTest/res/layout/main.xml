@@ -17,25 +17,37 @@
          android:id="@+id/policy_no_write"
          android:layout_height="wrap_content"
          android:layout_width="fill_parent"
-         android:text="Disallow writes" />
+         android:text="Detect writes" />
 
       <CheckBox
          android:id="@+id/policy_no_reads"
          android:layout_height="wrap_content"
          android:layout_width="fill_parent"
-         android:text="Disallow reads" />
+         android:text="Detect reads" />
 
       <CheckBox
          android:id="@+id/policy_no_network"
          android:layout_height="wrap_content"
          android:layout_width="fill_parent"
-         android:text="Disallow network" />
+         android:text="Detect network" />
+
+      <CheckBox
+         android:id="@+id/policy_custom"
+         android:layout_height="wrap_content"
+         android:layout_width="fill_parent"
+         android:text="Detect custom events" />
 
       <CheckBox
          android:id="@+id/policy_penalty_log"
          android:layout_height="wrap_content"
          android:layout_width="fill_parent"
          android:text="Penalty: Log?" />
+
+      <CheckBox
+         android:id="@+id/policy_penalty_flash"
+         android:layout_height="wrap_content"
+         android:layout_width="fill_parent"
+         android:text="Penalty: Flash?" />
 
       <CheckBox
          android:id="@+id/policy_penalty_dialog"
@@ -54,6 +66,12 @@
          android:layout_height="wrap_content"
          android:layout_width="fill_parent"
          android:text="Penalty: Death" />
+
+      <CheckBox
+         android:id="@+id/policy_penalty_network_death"
+         android:layout_height="wrap_content"
+         android:layout_width="fill_parent"
+         android:text="Penalty: Death-on-network" />
 
       <TextView  
          android:layout_width="fill_parent" 
@@ -164,6 +182,20 @@
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"
          android:text="Leak an SQLiteCursor"
+         />
+
+      <Button
+         android:id="@+id/custom_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Custom slow call"
+         />
+
+      <Button
+         android:id="@+id/gc_instance_button"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:text="Class instances test"
          />
 
   </LinearLayout>
